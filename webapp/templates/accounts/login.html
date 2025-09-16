@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+	<style>
+		body,
+		html
+		{
+		background-image: url(data:image/jpeg;base64,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);
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background-size: 1700px 900px;
+
+		}
+		.user_card {
+			width: 350px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #08B008B;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+
+		.form_container {
+			margin-top: 20px;
+		}
+
+		#form-title{
+			color: #fff;
+
+		}
+
+		.login_btn {
+			width: 100%;
+			background: #33ccff !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #f7ba5b !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+
+		#messages{
+			background-color: grey;
+			color: #fff;
+			padding: 10px;
+			margin-top: 10px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+
+
+					<h3 id="form-title">LOGIN</h3>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form method="POST" action="">
+						{% csrf_token %}
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+
+							<input type="text" name="username" placeholder="Username..." class="form-control">
+						</div>
+
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+
+								<input type="password" name="password" placeholder="Password..." class="form-control" >
+						</div>
+
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 				<input class="btn login_btn" type="submit" value="Login">
+				   			</div>
+					</form>
+
+				</div>
+
+				{% for message in messages %}
+					<p id="messages">{{message}}</p>
+				{% endfor %}
+
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
